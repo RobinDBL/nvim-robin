@@ -9,8 +9,8 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use({ 
-	  'rose-pine/neovim', 
+  use({
+	  'rose-pine/neovim',
 	  as = 'rose-pine',
 		config = function()
 			vim.cmd('colorscheme rose-pine')
@@ -58,5 +58,6 @@ use {
     'CosmicNvim/cosmic-ui',
     { 'MunifTanjim/nui.nvim'}
 }
+use('xiyaowong/transparent.nvim')
 
 end)

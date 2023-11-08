@@ -190,6 +190,11 @@ _G.packer_plugins = {
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["transparent.nvim"] = {
+    loaded = true,
+    path = "/home/robin/.local/share/nvim/site/pack/packer/start/transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
+  },
   ["vim-floaterm"] = {
     loaded = true,
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/vim-floaterm",
