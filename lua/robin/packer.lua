@@ -19,7 +19,6 @@ return require('packer').startup(function(use)
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use('nvim-treesitter/playground')
 use('ThePrimeagen/harpoon')
-use('mbbill/undotree')
 use('tpope/vim-fugitive')
 use {
   'VonHeikemen/lsp-zero.nvim',
@@ -35,6 +34,29 @@ use {
     {'hrsh7th/cmp-nvim-lsp'}, -- Required
     {'L3MON4D3/LuaSnip'},     -- Required
   }
+}
+use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+        { 'nvim-tree/nvim-web-devicons' } --required
+    }
+
+}
+use('windwp/nvim-autopairs')
+use {
+    'folke/noice.nvim',
+    requires = {
+        { 'MunifTanjim/nui.nvim'},
+        { 'rcarriga/nvim-notify'},
+    }
+}
+use('charludo/projectmgr.nvim')
+use('numTostr/Comment.nvim')
+use('voldikss/vim-floaterm')
+use('folke/which-key.nvim')
+use {
+    'CosmicNvim/cosmic-ui',
+    { 'MunifTanjim/nui.nvim'}
 }
 
 end)
