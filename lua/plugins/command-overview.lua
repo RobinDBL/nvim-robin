@@ -20,6 +20,15 @@ return {
             },
             p = {
                 name = 'project'
+            },
+            g = {
+                name = 'goto'
+            },
+            ld = {
+                name = 'debugger'
+            },
+            e = {
+                name = 'show error'
             }
         }
     })

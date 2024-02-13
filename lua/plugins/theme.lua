@@ -18,6 +18,12 @@ return {
 
             ui.setup();
         end
+    },
+    {
+        'folke/tokyonight.nvim'
+    },
+    {
+        'tiagovla/tokyodark.nvim'
     }
 
 }
