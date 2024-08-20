@@ -1,36 +1,18 @@
 return {
-    "folke/which-key.nvim",
-    config = function()
-        local wk = require('which-key')
-        wk.setup({
-            window = {
-                position = 'bottom',
-
-            },
-            layout = {
-                align = 'center'
-            }
-        })
-        wk.register({['<leader>'] = {
-            j = {
-                name = 'jump'
-            },
-            l = {
-                name = 'lsp'
-            },
-            p = {
-                name = 'project'
-            },
-            g = {
-                name = 'goto'
-            },
-            ld = {
-                name = 'debugger'
-            },
-            e = {
-                name = 'show error'
-            }
-        }
+  "folke/which-key.nvim",
+  dependencies = {
+    { 'nvim-tree/nvim-web-devicons'},
+  },
+  config = function()
+    local wk = require('which-key')
+    wk.add({
+      { "<leader>e", group = "show error" },
+      { "<leader>g", group = "goto" },
+      { "<leader>j", group = "jump" },
+      { "<leader>l", group = "lsp" },
+      { "<leader>ld", group = "debugger" },
+      { "<leader>p", group = "project" },
+      { "<leader>ph", group = "harpoon" },
     })
-end
+  end,
 }
