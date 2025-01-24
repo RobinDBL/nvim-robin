@@ -33,7 +33,6 @@ return {
       -- with the ones you want to install
       ensure_installed = {
         'lua_ls',
-        'tsserver',
         'eslint',
         'rust_analyzer',
         'angularls',
