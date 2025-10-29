@@ -29,7 +29,7 @@ return {
 
         -- vim.keymap.set('n', '<leader>phs', function() toggle_telescope(harpoon:list()) end, { desc = 'Toggle harpoon list with telescope ui' })
         vim.keymap.set('n', '<leader>phs', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = 'Toggle harpoon list' })
-        vim.keymap.set('n', '<leader>pha', function() harpoon:list():append() end, { desc = 'Add file to harpoon list' })
+        vim.keymap.set('n', '<leader>pha', function() harpoon:list():add() end, { desc = 'Add file to harpoon list' })
         vim.keymap.set('n', '<leader>phd', function() harpoon:list():remove() end, { desc = 'remove file to harpoon list' })
         vim.keymap.set('n', '<leader>phh', function() harpoon:list():select(1) end, { desc = 'Select harpoon file 1' })
         vim.keymap.set('n', '<leader>phj', function() harpoon:list():select(2) end, { desc = 'Select harpoon file 2' })
