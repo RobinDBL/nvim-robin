@@ -1,37 +1,47 @@
+local parsers = {
+  'blade',
+  'angular',
+  'html',
+  'php',
+}
+
 return {
-    {
-        'nvim-treesitter/nvim-treesitter',
-        build = ':TSUpdate',
-        init = function()
-            return {
-                -- A list of parser names, or "all" (the five listed parsers should always be installed)
-                ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "rust" },
-                -- Install parsers synchronously (only applied to `ensure_installed`)
-                sync_install = false,
-
-                -- Automatically install missing parsers when entering buffer
-                -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-                auto_install = true,
-
-                ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-                -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-
-                indent = {
-                    enable = true,
-                },
-                highlight = {
-                    enable = true,
-
-                    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-                    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-                    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-                    -- Instead of true it can also be a list of languages
-                    additional_vim_regex_highlighting = false,
-                },
-            }
-        end
+  {
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    build = ':TSUpdate',
+    dependencies = {
+      'LiadOz/nvim-dap-repl-highlights',
     },
-    {
-        'nvim-treesitter/playground'
-    }
+    opts = {},
+    config = function(_, opts)
+      local nts = require('nvim-treesitter')
+
+      vim.api.nvim_create_autocmd('FileType', {
+        pattern = parsers,
+        callback = function()
+          vim.treesitter.start()
+          vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+          vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end,
+      })
+
+      vim.api.nvim_create_autocmd('User', {
+        pattern = 'TSUpdate',
+        callback = function()
+          local configs = require('nvim-treesitter.parsers')
+        end,
+      })
+
+      nts.setup(opts)
+      nts.install(parsers)
+
+      vim.keymap.set('n', '<leader>it', vim.treesitter.inspect_tree)
+      vim.keymap.set('n', '<leader>i', vim.show_pos)
+    end,
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    opts = {},
+  }
 }

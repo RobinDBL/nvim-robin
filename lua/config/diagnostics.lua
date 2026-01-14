@@ -1,4 +1,4 @@
-local icons = require('robin.assets.icons')
+local icons = require('assets.icons')
 
 local function format_diagnostic(diagnostic)
     local icon = icons.error
