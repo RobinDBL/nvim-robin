@@ -5,6 +5,8 @@ return {
   "neovim/nvim-lspconfig",
   {'hrsh7th/cmp-nvim-lsp'}, -- autocomplete
   {'hrsh7th/nvim-cmp'}, -- autocomplete
+  {'L3MON4D3/LuaSnip'},     -- autocomplete
+  {'aznhe21/actions-preview.nvim'}, -- code actions
   },
   opts = {
       ensure_installed = {
