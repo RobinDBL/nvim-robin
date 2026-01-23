@@ -2,7 +2,10 @@ return {
   'mason-org/mason-lspconfig.nvim',
   dependencies = {
   { "mason-org/mason.nvim", opts = {} },
-  "neovim/nvim-lspconfig",
+  {
+    "neovim/nvim-lspconfig",
+    version = "*"
+  },
   {'hrsh7th/cmp-nvim-lsp'}, -- autocomplete
   {'hrsh7th/nvim-cmp'}, -- autocomplete
   {'L3MON4D3/LuaSnip'},     -- autocomplete
