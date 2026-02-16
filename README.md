@@ -16,6 +16,6 @@ Make sure that neovim version is high enough.
 
 You should build from source. You can use the following script to help:
 
-```
-curl -o- https://raw.githubusercontent.com/RobinDBL/nvim-robin/install-neovim.sh | bash
+```bash
+curl -o- https://raw.githubusercontent.com/RobinDBL/nvim-robin/refs/heads/main/install-neovim.sh | bash
 ```
