@@ -4,6 +4,7 @@ return {
         { 'nvim-tree/nvim-web-devicons' } --required
     },
     lazy = false,
+    version = "*",
     config = function()
         require("nvim-tree").setup{}
         vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeOpen, { desc = 'open tree view'})

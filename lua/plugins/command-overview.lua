@@ -3,6 +3,7 @@ return {
   dependencies = {
     { 'nvim-tree/nvim-web-devicons'},
   },
+  version = "*",
   config = function()
     local wk = require('which-key')
     wk.add({

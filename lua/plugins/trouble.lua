@@ -1,7 +1,11 @@
 return {
     "folke/trouble.nvim",
+      version = "*",
     dependencies = {
-        { 'nvim-tree/nvim-web-devicons' } --required
+        {
+          'nvim-tree/nvim-web-devicons',
+          version = "*",
+        } --required
     },
     config = function()
         local trouble = require("trouble")

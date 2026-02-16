@@ -1,15 +1,31 @@
 return {
   'mason-org/mason-lspconfig.nvim',
+  version = "*",
   dependencies = {
-  { "mason-org/mason.nvim", opts = {} },
-  {
-    "neovim/nvim-lspconfig",
-    version = "*"
-  },
-  {'hrsh7th/cmp-nvim-lsp'}, -- autocomplete
-  {'hrsh7th/nvim-cmp'}, -- autocomplete
-  {'L3MON4D3/LuaSnip'},     -- autocomplete
-  {'aznhe21/actions-preview.nvim'}, -- code actions
+    {
+      "mason-org/mason.nvim", opts = {},
+      version = "*",
+    },
+    {
+      "neovim/nvim-lspconfig",
+      version = "*"
+    },
+    {
+      'hrsh7th/cmp-nvim-lsp',
+      version = "*"
+    }, -- autocomplete
+    {
+      'hrsh7th/nvim-cmp',
+      version = "*"
+    }, -- autocomplete
+    {
+      'L3MON4D3/LuaSnip',
+      version = "*"
+    },     -- autocomplete
+    {
+      'aznhe21/actions-preview.nvim',
+      version = "*"
+    }, -- code actions
   },
   opts = {
       ensure_installed = {

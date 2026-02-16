@@ -1,5 +1,6 @@
 return {
     "voldikss/vim-floaterm",
+    version = "*",
     config = function()
         vim.keymap.set('n', '<C-l>', ':FloatermToggle<CR>', {desc = 'Toggle terminal'})
         vim.keymap.set('t', '<C-l>', [[<C-\><C-n>]], {desc = 'Close Floaterm'})

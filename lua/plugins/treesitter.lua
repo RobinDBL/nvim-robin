@@ -10,8 +10,10 @@ return {
     'nvim-treesitter/nvim-treesitter',
     lazy = false,
     build = ':TSUpdate',
+    version = "4d94666",
     dependencies = {
       'LiadOz/nvim-dap-repl-highlights',
+      version = "*",
     },
     opts = {},
     config = function(_, opts)
@@ -42,6 +44,7 @@ return {
   },
   {
     'nvim-treesitter/nvim-treesitter-context',
+    version = "*",
     opts = {},
   }
 }

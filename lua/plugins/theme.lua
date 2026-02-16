@@ -3,19 +3,23 @@ return {
     'rose-pine/neovim',
     name = 'rose-pine',
     lazy = false,
+    version = "*",
     config = function()
         -- vim.cmd('colorscheme rose-pine')
         vim.cmd('colorscheme rose-pine')
-        end
+      end
     },
     {
-        "xiyaowong/transparent.nvim"
+      "xiyaowong/transparent.nvim",
+      version = "*",
     },
     {
-        'folke/tokyonight.nvim'
+      'folke/tokyonight.nvim',
+      version = "*",
     },
     {
-        'tiagovla/tokyodark.nvim'
+      'tiagovla/tokyodark.nvim',
+      version = "*",
     }
 
 }
