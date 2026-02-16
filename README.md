@@ -11,6 +11,7 @@ npm >18.0.0
 
 Make sure that neovim version is high enough.
 
+> [!CAUTION]
 > Important! Do not use the ubuntu packages. The neovim version is outdated.
 
 You should build from source. You can use the following script to help:

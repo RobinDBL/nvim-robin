@@ -8,6 +8,7 @@ function install_neovim() {
   clone_nvim_source
   build_nvim_from_source
   configure_nvim
+  cleanup
 }
 
 function install_nvim_dependencies(){
@@ -37,6 +38,11 @@ function build_nvim_from_source() {
 function configure_nvim() {
   echo "Cloning configuration"
   git clone https://github.com/RobinDBL/nvim-robin ~/.config/nvim | tee $LOG_FILE
+}
+
+function cleanup() {
+  echo "Cleaning up..."
+  rm -rf ~/.downloads
 }
 
 install_neovim
